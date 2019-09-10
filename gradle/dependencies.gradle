@@ -1,15 +1,15 @@
 ext {
-    compileSdkVersion = 27
-    buildToolsVersion = '28.0.2'
+    compileSdkVersion = 28
+    buildToolsVersion = '28.0.3'
     minSdkVersion = 14
-    targetSdkVersion = 27
+    targetSdkVersion = 28
     sourceCompatibilityVersion = JavaVersion.VERSION_1_7
     targetCompatibilityVersion = JavaVersion.VERSION_1_7
-    kotlin_version = '1.2.51'
+    kotlin_version = '1.3.50'
+    ext.kotlinx_coroutines_core_v = '1.1.1'
+    ext.kotlin_coroutines_android_v = '1.3.1'
+    supportLibrariesVersion = '28.0.0'
     anko_version = '0.10.1'
-    coroutines_version = '0.18'
-    supportLibrariesVersion = '27.1.0'
-
     dep = [
             androidPlugin               : 'com.android.tools.build:gradle:3.0.0-beta6',
             supportV4                   : "com.android.support:support-v4:$supportLibrariesVersion",
@@ -21,9 +21,11 @@ ext {
             assertj                     : 'org.assertj:assertj-core:2.8.0',
             mockito                     : 'org.mockito:mockito-core:2.10.0',
 
-            kotlin                      : "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version",
-            kotlinPlugin                : "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version",
-            kotlinxCoroutines           : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version",
+            //kotlin
+            kotlin            : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            kotlin_reflect                : "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version",
+            kotlinx_coroutines_core       : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutines_core_v",
+            kotlinxCoroutines     : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_android_v",
 
             // anko commons
             ankoSdk                     : "org.jetbrains.anko:anko-sdk25:$anko_version",
